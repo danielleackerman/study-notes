@@ -1,56 +1,101 @@
 # Natural Law — Study Notes
 
-Static HTML study site for a three-part lecture series. Built for GitHub Pages.
+Live site: https://danielleackerman.github.io/natural-law-study/
 
-## Structure
+A static HTML study site for Mark Passio’s three-part lecture series Natural Law: The Real Law of Attraction.
 
-```
-.
-├── index.html              # Landing page (links to all three lectures)
-├── lecture-01.html         # Lecture 01 outline page
-├── lecture-02.html         # Lecture 02 outline page
-├── lecture-03.html         # Lecture 03 outline page
-└── assets/
-    ├── css/main.css        # Shared styling (source of truth)
-    ├── js/player.js        # YouTube sync + popups + lightbox + TOC
-    └── slides/
-        ├── lecture-01/     # Timestamped JPGs: HH-MM-SS.jpg
-        ├── lecture-02/
-        └── lecture-03/
-```
+This project turns the lectures into granular, timestamped study outlines with synchronized YouTube playback, slide references, hover previews, lightbox slide viewing, and a structured table of contents.
 
-## Features
+## What this study covers
 
-- **Sticky YouTube player** at the top of each lecture page, collapses on scroll.
-- **Clickable timestamps** — click any `[00:13:14]` to seek the video.
-- **Now-playing indicator** in the player metadata tracks the current time.
-- **Gwern-style slide popups** — hover any `slide` link to preview, click to seek + lightbox.
-- **Sticky TOC sidebar** with active-section highlighting.
-- **Dark/light mode toggle**, persists via localStorage.
-- **Keyboard:** Esc closes lightbox.
+This study presents Natural Law as an objective moral law governing human behavior. Across the three lectures, the material argues that freedom, order, and human flourishing depend on knowledge, understanding, conscience, and action aligned with moral truth.
 
-## Authoring outlines
+## Lecture 01
 
-Each outline item uses one of these tags as a label:
+Lecture 01 introduces the study as an initiation into hidden or esoteric knowledge. It distinguishes the real law of attraction from New Age versions by arguing that desired conditions do not manifest through thought or feeling alone; they require knowledge, understanding, and right action.
 
-| Tag | Color | Meaning |
-|---|---|---|
-| `CORE` | accent | speaker's main point |
-| `DETAIL` | muted | specific data, example, sub-point |
-| `LOGIC` | amber | step in a "why" chain |
-| `TANGENT` | muted italic | side-quest the speaker takes |
-| `NUANCE` | muted | aside, caveat |
-| `QUOTE` | muted | verbatim quotation |
+Major topics:
 
-Inline elements:
-- `<a class="ts" data-ts="00:13:14">00:13:14</a>` — clickable timestamp
-- `<a class="slide-ref" data-ts="00:13:14">slide</a>` — popup-triggering slide reference
-- `<span class="power">"Divine Call"</span>` — speaker's exact "power word"
+- Teachability
+- Institutional limiters of consciousness
+- The meaning of occult knowledge
+- Natural Law as objective truth
+- Nescience vs. ignorance
+- Truth vs. perception
+- Consciousness, thought, emotion, and action
 
-Slide filenames must match the `data-ts` value with `:` replaced by `-`, e.g. `00:13:14` → `00-13-14.jpg`.
+## Lecture 02
 
-## Deploy
+Lecture 02 explores human consciousness, brain structure, moral decision-making, imbalance, and Natural Law principles.
 
-1. Commit and push to a GitHub repo.
-2. Settings → Pages → Source: `main` branch, `/` root.
-3. Done.
+Major topics:
+
+- R-complex, limbic system, and neocortex
+- Left-brain and right-brain imbalance
+- Master mentality and slave mentality
+- Intellect vs. true intelligence
+- The Seven Hermetic Principles
+- The Lost Principle of Care
+- The Five Expressions of Natural Law
+- Right action vs. wrong action
+
+## Lecture 03
+
+Lecture 03 applies the Natural Law framework to rights, government, coercion, conscience, and moral responsibility.
+
+Major topics:
+
+- No victim, no crime
+- Rights as non-delegable
+- Taxation, prohibition, licensing, and permits
+- Force vs. violence
+- Conscience
+- Statism and order-following
+- The Lost Word
+- The Great Work
+- The Quantum Shift
+
+## Site features
+
+- Three lecture pages with granular outlines
+- Embedded YouTube player
+- Clickable timestamps
+- Timestamped slide references
+- Hover slide popups
+- Lightbox slide viewing
+- Sticky table of contents
+- Dark/light mode toggle
+- Static HTML with no build system required
+
+## Project structure
+
+- index.html
+- lecture-01.html
+- lecture-02.html
+- lecture-03.html
+- assets/css/main.css
+- assets/js/player.js
+- assets/slides/lecture-01/
+- assets/slides/lecture-02/
+- assets/slides/lecture-03/
+
+## Local preview
+
+Run:
+
+python3 -m http.server 8000
+
+Then open:
+
+open http://localhost:8000/
+
+If port 8000 is busy, use:
+
+python3 -m http.server 8080
+open http://localhost:8080/
+
+## GitHub Pages
+
+Published from the main branch using GitHub Pages.
+
+Live site: https://danielleackerman.github.io/natural-law-study/
