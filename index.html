@@ -3,46 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Natural Law — Study Notes</title>
+  <title>Study Notes</title>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
   <div class="index-page">
     <header class="index-hero">
-      <div class="doc-eyebrow" style="margin-bottom: 24px;">Study Notes</div>
-      <h1>Natural Law</h1>
+      <div class="doc-eyebrow" style="margin-bottom: 24px;">Study Library</div>
+      <h1>Study Notes</h1>
       <p>
-        Granular outlines and synchronized slide references for a three-part lecture
-        series. Each page pairs the source video with a verbatim-fidelity outline,
-        clickable timestamps, and slide popups.
+        Granular, timestamped study guides. Each one pairs a source recording with a
+        verbatim-fidelity outline, clickable timestamps that drive the embedded player,
+        and synchronized references — static HTML, no build step.
       </p>
     </header>
 
+    <!--
+      STUDY LIBRARY
+      Each study is a self-contained folder (see _TEMPLATE/ for the skeleton).
+      To add a study: copy _TEMPLATE/ to a new folder, fill it in, then paste one
+      <a class="lecture-card"> block below. Keep the running number in .num.
+    -->
     <nav class="lecture-list">
-      <a class="lecture-card" href="lecture-01.html">
+
+      <a class="lecture-card" href="natural-law/index.html">
         <span class="num">01</span>
         <div>
           <div class="lecture-title">Natural Law: The Real Law of Attraction</div>
-          <p class="lecture-sub">Initiation. Teachability. The Occult. The five institutional limiters. Truth vs. perception. The internal trinity.</p>
+          <p class="lecture-sub">Mark Passio's three-part lecture series on Natural Law as objective moral law — teachability, the occult, the brain, the Seven Hermetic Principles, rights, and the Great Work.</p>
         </div>
-        <div class="lecture-meta">02:02:27<br>29 slides</div>
+        <div class="lecture-meta">3 lectures<br>~8 hrs</div>
       </a>
-      <a class="lecture-card" href="lecture-02.html">
+
+      <a class="lecture-card" href="gateway/index.html">
         <span class="num">02</span>
         <div>
-          <div class="lecture-title">Lecture 02 — Natural Law: The Real Law of Attraction</div>
-          <p class="lecture-sub">Brain structure and the two failure modes; the Seven Hermetic Principles plus the Lost 8th (CARE); the Five Expressions of natural law; right vs. wrong defined.</p>
+          <div class="lecture-title">The Gateway Experience — Wave 1: Discovery</div>
+          <p class="lecture-sub">Monroe Institute Hemi-Sync® meditation. Six Discovery exercises introducing Focus 10 — "Mind Awake, Body Asleep" — plus Resonant Tuning, the Energy Conversion Box, the REBAL, and conscious sleep.</p>
         </div>
-        <div class="lecture-meta">~03:30:00<br>89 slides</div>
+        <div class="lecture-meta">6 exercises<br>1 recording</div>
       </a>
-      <a class="lecture-card" href="lecture-03.html">
-        <span class="num">03</span>
-        <div>
-          <div class="lecture-title">Lecture 03 — Natural Law: The Real Law of Attraction</div>
-          <p class="lecture-sub">Rights and their non-delegation; taxation, prohibition, and licensing as institutional theft; force vs. violence; statism, order following, and self-loathing; the Lost Word, the Great Work, and the Quantum Shift.</p>
-        </div>
-        <div class="lecture-meta">~03:20:00<br>110 slides</div>
-      </a>
+
     </nav>
   </div>
   <button class="theme-toggle">LIGHT MODE</button>
