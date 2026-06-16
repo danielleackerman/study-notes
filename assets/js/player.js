@@ -10,6 +10,10 @@
   let ytReady = false;
   let currentTimeInterval = null;
   const LECTURE_DIR = document.body.dataset.lecture || 'lecture-01';
+  // Path from the current page up to the shared root assets/ folder.
+  // Studies live in subfolders (e.g. /natural-law/, /gateway/) and set
+  // data-asset-base="../" so slide images resolve to the root assets/.
+  const ASSET_BASE = document.body.dataset.assetBase || '';
 
   // ---------- Helpers ----------
   function tsToSeconds(ts) {
@@ -124,7 +128,7 @@
     const filename = slideFilenameFromTs(ts);
     const img = popup.querySelector('img');
     const cap = popup.querySelector('.ts-cap');
-    img.src = `assets/slides/${LECTURE_DIR}/${filename}`;
+    img.src = `${ASSET_BASE}assets/slides/${LECTURE_DIR}/${filename}`;
     img.alt = `Slide at ${ts}`;
     cap.textContent = ts;
 
@@ -201,7 +205,7 @@
     createLightbox();
     const img = lightbox.querySelector('img');
     const cap = lightbox.querySelector('.lightbox-caption');
-    img.src = `assets/slides/${LECTURE_DIR}/${slideFilenameFromTs(ts)}`;
+    img.src = `${ASSET_BASE}assets/slides/${LECTURE_DIR}/${slideFilenameFromTs(ts)}`;
     cap.textContent = `Slide at ${ts}  ·  click anywhere to close`;
     lightbox.classList.add('visible');
     hidePopup();

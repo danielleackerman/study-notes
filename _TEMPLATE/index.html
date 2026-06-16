@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  STUDY TEMPLATE  —  how to add a new study
+  ============================================================
+  1. Copy this whole _TEMPLATE/ folder to a new lowercase-hyphenated
+     name, e.g.  cp -r _TEMPLATE my-new-study
+  2. In this file, replace every {{PLACEHOLDER}} below.
+       {{VIDEO_ID}}       YouTube id only (the part after /embed/ or v=)
+       {{STUDY_TITLE}}    shown in the browser tab + doc header
+       {{...}}            the rest are visible text / timestamps
+  3. Duplicate the <h2> + <ul> section block for each section of the
+     outline. Timestamps use HH:MM:SS and must match the TOC entries.
+  4. Add one <a class="lecture-card"> block to the root index.html.
+  5. Slides are optional. If the study has slide images, drop them in
+     /assets/slides/{{STUDY_ID}}/ named HH-MM-SS.jpg, set
+     data-lecture="{{STUDY_ID}}" on <body>, and add
+     <a class="slide-ref" data-ts="HH:MM:SS">slide</a> inline.
+
+  NOTE: the leading underscore keeps this folder out of the published
+  GitHub Pages site (Jekyll ignores _-prefixed folders), so the template
+  never appears live. Copy it to a normal name to publish a real study.
+  ============================================================
+-->
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{STUDY_TITLE}}</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-lecture="{{STUDY_ID}}" data-asset-base="../">
+
+<div class="study-layout">
+
+  <!-- ============ LEFT: STICKY VIDEO + TOC ============ -->
+  <aside class="left-col">
+    <div class="player-wrap">
+      <iframe
+        id="yt-player"
+        src="https://www.youtube.com/embed/{{VIDEO_ID}}?enablejsapi=1&rel=0"
+        title="{{STUDY_TITLE}}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="player-meta">
+      <span><span class="label">DURATION</span><span>{{DURATION}}</span></span>
+      <span><span class="label">SECTIONS</span><span>{{COUNT}}</span></span>
+      <span><span class="label">NOW</span><span class="now-playing">00:00:00</span></span>
+    </div>
+
+    <div class="toc-panel">
+      <div class="toc-label">Contents</div>
+      <nav class="toc">
+        <ul>
+          <li><a href="#sec-01"><span class="toc-ts">00:00:00</span>{{SECTION 1 SHORT TITLE}}</a></li>
+          <!-- duplicate <li> per section -->
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- ============ RIGHT: OUTLINE ============ -->
+  <main class="right-col">
+
+    <header class="doc-header">
+      <div class="doc-eyebrow">{{EYEBROW}}</div>
+      <h1 class="doc-title">{{STUDY_TITLE}}</h1>
+      <p class="doc-subtitle">{{ONE-OR-TWO-SENTENCE SUMMARY}}</p>
+      <div class="doc-meta">
+        <div><span class="k">Source</span><span>{{SOURCE}}</span></div>
+        <div><span class="k">Format</span><span>{{FORMAT}}</span></div>
+        <div><span class="k">Outline rev</span><span>1.0</span></div>
+      </div>
+    </header>
+
+    <article class="outline">
+
+      <!-- ===== duplicate this block per section ===== -->
+      <h2 id="sec-01"><span class="section-num">01</span><a class="ts" data-ts="00:00:00">00:00:00</a> — {{SECTION 1 TITLE}}</h2>
+      <ul>
+        <li><span class="tag core">CORE</span>{{Key point. Use <span class="power">power</span> spans for emphasis.}}</li>
+        <li>{{Supporting point.}}</li>
+      </ul>
+      <!-- ===== end section block ===== -->
+
+      <footer class="doc-footer">
+        <span>{{STUDY_TITLE}} · outline rev 1.0</span>
+        <a href="../index.html">← all studies</a>
+      </footer>
+    </article>
+  </main>
+
+</div>
+
+<button class="theme-toggle">LIGHT MODE</button>
+<script src="../assets/js/player.js"></script>
+</body>
+</html>

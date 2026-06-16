@@ -1,101 +1,53 @@
-# Natural Law — Study Notes
+# Study Notes
 
-Live site: https://danielleackerman.github.io/natural-law-study/
+**A study library for difficult material on consciousness, philosophy, and human experience.**
 
-A static HTML study site for Mark Passio’s three-part lecture series Natural Law: The Real Law of Attraction.
+Long lectures and recordings, broken down into structured outlines you can actually navigate — read closely, review, and return to. Built for independent study, not passive listening.
 
-This project turns the lectures into granular, timestamped study outlines with synchronized YouTube playback, slide references, hover previews, lightbox slide viewing, and a structured table of contents.
+🔗 **[Visit the site →](https://danielleackerman.github.io/study-notes/)**
 
-## What this study covers
+---
 
-This study presents Natural Law as an objective moral law governing human behavior. Across the three lectures, the material argues that freedom, order, and human flourishing depend on knowledge, understanding, conscience, and action aligned with moral truth.
+## What this is
 
-## Lecture 01
+- **Two study areas, side by side** — Natural Law and The Gateway Experience
+- **Structured, not transcribed** — each source becomes a navigable outline, not a wall of text
+- **Timestamped** — where a recording exists, outline points link straight to the moment they discuss
+- **No account, no fixed path** — pick an area, go where you want, come back as often as you need
 
-Lecture 01 introduces the study as an initiation into hidden or esoteric knowledge. It distinguishes the real law of attraction from New Age versions by arguing that desired conditions do not manifest through thought or feeling alone; they require knowledge, understanding, and right action.
+These are two separate tracks. They're studied in one place — but they're not the same body of thought, and neither is offered as proof of the other.
 
-Major topics:
+---
 
-- Teachability
-- Institutional limiters of consciousness
-- The meaning of occult knowledge
-- Natural Law as objective truth
-- Nescience vs. ignorance
-- Truth vs. perception
-- Consciousness, thought, emotion, and action
+## The study areas
 
-## Lecture 02
+### 🜂 Natural Law
+*Mark Passio's three-part lecture series, "The Real Law of Attraction."*
 
-Lecture 02 explores human consciousness, brain structure, moral decision-making, imbalance, and Natural Law principles.
+An extended argument that there's an objective moral law most people are never taught. Across three parts:
 
-Major topics:
+- **Part 1** — teachability, hidden ("occult") knowledge, truth vs. perception
+- **Part 2** — the brain, the Seven Hermetic Principles, the principle of care, right vs. wrong action
+- **Part 3** — rights and their non-delegation, force vs. violence, conscience, statism, the Great Work
 
-- R-complex, limbic system, and neocortex
-- Left-brain and right-brain imbalance
-- Master mentality and slave mentality
-- Intellect vs. true intelligence
-- The Seven Hermetic Principles
-- The Lost Principle of Care
-- The Five Expressions of Natural Law
-- Right action vs. wrong action
+### ☿ The Gateway Experience
+*Wave 1 — Discovery. The Monroe Institute's Hemi-Sync® audio program.*
 
-## Lecture 03
+Six guided exercises that introduce **Focus 10** — what the program calls "mind awake, body asleep" — and the tools it builds toward it:
 
-Lecture 03 applies the Natural Law framework to rights, government, coercion, conscience, and moral responsibility.
+- **#1 Orientation** — the energy-conversion box, resonant tuning, the affirmation
+- **#2 Introduction to Focus 10** — "mind awake, body asleep"
+- **#3 Advanced Focus 10** — the resonant energy balloon (REBAL)
+- **#4 Release & Recharge** — energy revitalization
+- **#5 Exploration, Sleep** — entering sleep consciously
+- **#6 Free Flow 10** — building your own practice
 
-Major topics:
+---
 
-- No victim, no crime
-- Rights as non-delegable
-- Taxation, prohibition, licensing, and permits
-- Force vs. violence
-- Conscience
-- Statism and order-following
-- The Lost Word
-- The Great Work
-- The Quantum Shift
+## An evolving resource
 
-## Site features
+This is a work in progress. Materials get reorganized, expanded, and refined, and new study areas get added as they're prepared.
 
-- Three lecture pages with granular outlines
-- Embedded YouTube player
-- Clickable timestamps
-- Timestamped slide references
-- Hover slide popups
-- Lightbox slide viewing
-- Sticky table of contents
-- Dark/light mode toggle
-- Static HTML with no build system required
+---
 
-## Project structure
-
-- index.html
-- lecture-01.html
-- lecture-02.html
-- lecture-03.html
-- assets/css/main.css
-- assets/js/player.js
-- assets/slides/lecture-01/
-- assets/slides/lecture-02/
-- assets/slides/lecture-03/
-
-## Local preview
-
-Run:
-
-python3 -m http.server 8000
-
-Then open:
-
-open http://localhost:8000/
-
-If port 8000 is busy, use:
-
-python3 -m http.server 8080
-open http://localhost:8080/
-
-## GitHub Pages
-
-Published from the main branch using GitHub Pages.
-
-Live site: https://danielleackerman.github.io/natural-law-study/
+<sub>Static HTML site, published with GitHub Pages.</sub>

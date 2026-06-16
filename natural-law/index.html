@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Law — Study Notes</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="index-page">
+    <header class="index-hero">
+      <div class="doc-eyebrow" style="margin-bottom: 24px;"><a href="../index.html" style="color: inherit; text-decoration: none;">← Study Library</a></div>
+      <h1>Natural Law</h1>
+      <p>
+        Granular outlines and synchronized slide references for a three-part lecture
+        series. Each page pairs the source video with a verbatim-fidelity outline,
+        clickable timestamps, and slide popups.
+      </p>
+    </header>
+
+    <nav class="lecture-list">
+      <a class="lecture-card" href="lecture-01.html">
+        <span class="num">01</span>
+        <div>
+          <div class="lecture-title">Natural Law: The Real Law of Attraction</div>
+          <p class="lecture-sub">Initiation. Teachability. The Occult. The five institutional limiters. Truth vs. perception. The internal trinity.</p>
+        </div>
+        <div class="lecture-meta">02:02:27<br>29 slides</div>
+      </a>
+      <a class="lecture-card" href="lecture-02.html">
+        <span class="num">02</span>
+        <div>
+          <div class="lecture-title">Lecture 02 — Natural Law: The Real Law of Attraction</div>
+          <p class="lecture-sub">Brain structure and the two failure modes; the Seven Hermetic Principles plus the Lost 8th (CARE); the Five Expressions of natural law; right vs. wrong defined.</p>
+        </div>
+        <div class="lecture-meta">~03:30:00<br>89 slides</div>
+      </a>
+      <a class="lecture-card" href="lecture-03.html">
+        <span class="num">03</span>
+        <div>
+          <div class="lecture-title">Lecture 03 — Natural Law: The Real Law of Attraction</div>
+          <p class="lecture-sub">Rights and their non-delegation; taxation, prohibition, and licensing as institutional theft; force vs. violence; statism, order following, and self-loathing; the Lost Word, the Great Work, and the Quantum Shift.</p>
+        </div>
+        <div class="lecture-meta">~03:20:00<br>110 slides</div>
+      </a>
+    </nav>
+  </div>
+  <button class="theme-toggle">LIGHT MODE</button>
+  <script>
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.dataset.theme = saved;
+    const btn = document.querySelector('.theme-toggle');
+    btn.textContent = document.documentElement.dataset.theme === 'light' ? 'DARK MODE' : 'LIGHT MODE';
+    btn.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme;
+      const next = cur === 'light' ? 'dark' : 'light';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'light' ? 'DARK MODE' : 'LIGHT MODE';
+    });
+  </script>
+</body>
+</html>
