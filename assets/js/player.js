@@ -9,6 +9,10 @@
   let ytPlayer = null;
   let ytReady = false;
   let currentTimeInterval = null;
+  // Native <audio>/<video> player (id="media-player"), used by studies that
+  // host their own media instead of embedding YouTube. When present, the page
+  // uses this element and the YouTube API is never loaded.
+  let nativeMedia = null;
   const LECTURE_DIR = document.body.dataset.lecture || 'lecture-01';
   // Path from the current page up to the shared root assets/ folder.
   // Studies live in subfolders (e.g. /natural-law/, /gateway/) and set
@@ -67,6 +71,12 @@
   }
 
   function startTimeTracking() {
+    if (nativeMedia) {
+      nativeMedia.addEventListener('timeupdate', () => {
+        updateNowPlaying(nativeMedia.currentTime || 0);
+      });
+      return;
+    }
     if (currentTimeInterval) clearInterval(currentTimeInterval);
     currentTimeInterval = setInterval(() => {
       if (!ytReady || !ytPlayer || !ytPlayer.getCurrentTime) return;
@@ -74,6 +84,29 @@
       updateNowPlaying(t);
     }, 500);
   }
+
+  // ---------- Track loading (native audio per-exercise) ----------
+  function loadTrack(el) {
+    if (!nativeMedia) return;
+    const src = el.dataset.src;
+    if (!src) return;
+    if (nativeMedia.getAttribute('src') !== src) {
+      nativeMedia.setAttribute('src', src);
+    }
+    nativeMedia.play().catch(() => {});
+    document.querySelectorAll('.track').forEach((t) => {
+      t.classList.toggle('playing', t === el);
+    });
+    const label = document.querySelector('.now-track');
+    if (label) label.textContent = el.dataset.title || '';
+  }
+  document.addEventListener('click', (e) => {
+    const trk = e.target.closest('.track');
+    if (trk) {
+      e.preventDefault();
+      loadTrack(trk);
+    }
+  });
 
   function updateNowPlaying(seconds) {
     const display = document.querySelector('.now-playing');
@@ -252,7 +285,12 @@
 
   // ---------- Init ----------
   document.addEventListener('DOMContentLoaded', () => {
-    loadYouTubeAPI();
+    nativeMedia = document.getElementById('media-player');
+    if (nativeMedia) {
+      startTimeTracking();
+    } else {
+      loadYouTubeAPI();
+    }
     handleScroll();
     updateTocActive();
   });
