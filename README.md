@@ -4,7 +4,7 @@
 
 Long lectures and recordings, broken down into structured outlines you can actually navigate — read closely, review, and return to. Built for independent study, not passive listening.
 
-🔗 **[Visit the site →](https://danielleackerman.github.io/natural-law-study/)**
+🔗 **[Visit the site →](https://danielleackerman.github.io/study-notes/)**
 
 ---
 
